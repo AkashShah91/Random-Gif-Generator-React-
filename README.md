@@ -1,16 +1,87 @@
-# React + Vite
+# Random GIF Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite app that fetches random GIFs from the Giphy API. It includes two generators:
 
-Currently, two official plugins are available:
+- A random GIF panel that shows a new GIF each time you click Generate.
+- A tag-based GIF panel that lets you search for GIFs by keyword, such as cats, cars, or space.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Fetches random GIFs from Giphy
+- Generates GIFs by tag/category
+- Loading spinner while requests are in progress
+- Clean UI built with React and Tailwind CSS
+- Simple and responsive single-page layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- Giphy API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prerequisites
+
+Before running the app, make sure you have:
+
+- Node.js installed
+- npm or yarn installed
+- A Giphy API key
+
+## Setup
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Create a `.env` file in the project root and add your Giphy API key:
+
+   ```env
+   VITE_GIPHY_API_KEY=your_api_key_here
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open the local URL shown in the terminal, usually:
+
+   ```bash
+   http://localhost:5173
+   ```
+
+## Available Scripts
+
+```bash
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
+
+## Project Structure
+
+```bash
+src/
+  components/
+    Random.jsx
+    Tag.jsx
+    Spinner.jsx
+  hooks/
+    useGif.jsx
+  App.jsx
+  main.jsx
+```
+
+## Notes
+
+This app depends on the Giphy API, so a valid API key is required for it to work properly. You can get one from the Giphy Developers portal.
+
+## License
+
+This project is for educational/demo purposes.
